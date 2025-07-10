@@ -1,64 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+    android:id="@+id/drawer_layout"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end"
     tools:context=".MainActivity">
-    
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarId"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/JetStream"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:elevation="4dp"
-        >
-        <ImageButton
-            android:id="@+id/menuIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:src="@drawable/baseline_line_weight_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Menu"
-            android:layout_marginTop="50dp"
-            android:padding="10dp"
-            />
 
-    </androidx.appcompat.widget.Toolbar>
-
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/Champagne"
+        >
+    
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarId"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/PowderBlue"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_height="100dp"
+            android:background="@color/JetStream"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"
             >
-            <TextView
-                android:id="@+id/textMain"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/menuIcon"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/baseline_line_weight_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Menu"
+                android:layout_marginTop="50dp"
                 android:padding="10dp"
-                android:layout_margin="20dp"
-                android:background="@color/BrightGray"
-                android:text="test"
-                android:textColor="@color/black"
-                android:textSize="30dp"
                 />
 
+        </androidx.appcompat.widget.Toolbar>
 
-       </LinearLayout>
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/PowderBlue"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                >
+                <TextView
+                    android:id="@+id/textMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="20dp"
+                    android:background="@color/BrightGray"
+                    android:text="test"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    />
+           </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include layout="@layout/second_activity_main"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
