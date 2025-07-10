@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
     * */
 
+    // set up menu icon on drawer
     private void setUpMenuIcon() {
         imageButton = findViewById(R.id.menuIcon);
         if ( imageButton != null) {
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // set up back icon on drawer
     private void setupDrawerBackIcon() {
         imageButton = findViewById(R.id.backIcon);
         if (imageButton != null) {
@@ -74,11 +76,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // control function of drawer.
     @Override
     public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+        if (drawerLayout.isDrawerOpen(GravityCompat.END)) { // if drawer opens than close it.
             drawerLayout.closeDrawer(GravityCompat.END);
         } else {
+            // if drawer is already closed than process back function.
             super.onBackPressed();
         }
     }
