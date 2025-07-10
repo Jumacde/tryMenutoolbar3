@@ -7,6 +7,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarId"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/JetStream"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        >
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/baseline_line_weight_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,33 +52,11 @@
                 android:padding="10dp"
                 android:layout_margin="20dp"
                 android:background="@color/BrightGray"
-                android:text="Hi"
+                android:text="test"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 />
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="40dp"
-                android:gravity="center"
-                android:text="button"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:backgroundTint="@color/GreenSheen"/>
-            <Button
-                android:id="@+id/buttonClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="clear"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:backgroundTint="@color/RipeMango"
-                />
+
 
        </LinearLayout>
     </ScrollView>

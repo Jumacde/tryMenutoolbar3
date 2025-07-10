@@ -15,16 +15,45 @@
         android:textColor="@color/YankeesBlue"
         android:background="@color/DutchWhite"
         android:gravity="center"
-        android:layout_marginTop="70dp"/>
-    <Button
-        android:id="@+id/buttonClose"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="close"
-        android:textSize="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/YankeesBlue"
-        android:backgroundTint="@color/RipeMango"/>
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="50dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/DutchWhite"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="back"
+            android:textColor="@color/YankeesBlue"
+            android:gravity="center"
+            android:textSize="40dp"/>
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_west_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
