@@ -5,8 +5,26 @@
     android:orientation="vertical"
     android:clickable="true"
     android:focusable="true"
+    android:background="@color/CambridgeBlue">
 
-    >
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="success!!"
+        android:textSize="60dp"
+        android:textColor="@color/YankeesBlue"
+        android:background="@color/DutchWhite"
+        android:gravity="center"
+        android:layout_marginTop="70dp"/>
+    <Button
+        android:id="@+id/buttonClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="close"
+        android:textSize="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/YankeesBlue"
+        android:backgroundTint="@color/RipeMango"/>
 
 </LinearLayout>
